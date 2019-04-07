@@ -1,4 +1,4 @@
-#KIOSK AUDIO & IMAGE DISPLAY SOFTWARE
+# KIOSK AUDIO & IMAGE DISPLAY SOFTWARE
 
 This software was created to allow Big Heavy World to display
 a set of photographs and associated audio commentary
@@ -17,16 +17,16 @@ The app is designed to run in a very specific environment
 
 The CSS is hard-coded to accommodate the dimensions of the iPad.
 
-##Creating the Playlist
+## Creating the Playlist
 
 The playlist consists of a Javascript array of items.
 Each item is an array containing:
-* The name of the thumbnail file (without the prefix)
-* The name of the full-size image file (without the prefix)
+* The name of the thumbnail file
+* The name of the full-size image file
 * The name of the audio file
 * The name of the artist
 
-The first item in the playlist is ignored by the software;
+The first row (array item) in the playlist is ignored by the software;
 it is there as a guide for those editing the playlist.
 
 An empty playlist is found in "playlist-dist.js".
@@ -43,6 +43,10 @@ After the creation of the playlist, and before uploading:
 * All thumbnails were prefixed with "t "
 * All full-sized images were prefixed with "i "
 
+If you have access to a program that allows for uploading of files
+to directories, you may wish to organize the files into directories,
+and modify the appropriate code in script.js.
+
 All audio files provided to me already had as their first n characters
 digits which specified the order in which they were to be played.
 This kept them segregated and unique.
@@ -54,7 +58,6 @@ you may also wish to follow this convention.
 ## Program notes
 
 The Javascript code creates the "menu" of thumbnails from the playlist.
-It prepends "t " to the string stored in the playlist.
 The CSS causes the menu of thumbnails to be displayed
 on the left side of the screen.
 
@@ -64,7 +67,7 @@ which corresponds to the offset of the files in the playlist.
 When the user taps on a thumbnail, the Javascript code uses
 the data-index attribute to find the correct item to display.
 
-The Javascript code displays the full-size image.
+The Javascript code specifies the full-size image to be displayed.
 It specifies the audio file to be played,
 but does not display the standard controls.
 It creates custom controls,
@@ -77,10 +80,17 @@ included a way to select the device to be used to play the audio.
 In an environment with multiple options, it may be necessary
 to configure the iPad to only permit the desired option.
 
-The state after initial load is that the first item is displayed
-with the audio paused.
+Upon initial load, the first item is displayed with the audio paused.
 
 NOTE: The "Idle Time Limit" setting should be set to a large enough
 value to allow the longest audio file to be played.
 When the limit is reached, the Kiosk app will revert to its
 initial state, even if it is in the middle of playing an audio file.
+
+## Credits
+
+Thanks to our sponsor Big Heavy World for the use of its space 
+for Code for BTV meetings, and other in-kind donations.
+
+Thanks to our sponsor JetBrains for making its tools available for
+this and other Code for BTV projects.
