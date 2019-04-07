@@ -29,7 +29,8 @@ Each item is an array containing:
 The first row (array item) in the playlist is ignored by the software;
 it is there as a guide for those editing the playlist.
 
-An empty playlist is found in "playlist-dist.js".
+An empty playlist is found in "playlist-dist.js". It should be copied
+to "playlist.js" and modified to contain the needed file names.
 
 ## Uploading the files
 
@@ -75,6 +76,14 @@ with the name of the artist (if available) and play/pause buttons.
 A progress bar appears at the top of the custom controls.
 Volume control is purposefully omitted.
 
+If a fifth field is added to a playlist item, it can be displayed
+as "artist-info" by uncommenting two lines of code in script.js
+and two lines of code in index.html.
+
+
+The variable "copyrightText" in playlist.js can be used to display
+copyright information, or set to a null string if none is desired.
+
 NOTE: The standard audio controls displayed by the Kiosk Pro Browser
 included a way to select the device to be used to play the audio.
 In an environment with multiple options, it may be necessary
@@ -82,8 +91,8 @@ to configure the iPad to only permit the desired option.
 
 Upon initial load, the first item is displayed with the audio paused.
 
-NOTE: The "Idle Time Limit" setting should be set to a large enough
-value to allow the longest audio file to be played.
+NOTE: The "Idle Time Limit" setting in Kiosk Pro should be set to a
+large enough value to allow the longest audio file to be played.
 When the limit is reached, the Kiosk app will revert to its
 initial state, even if it is in the middle of playing an audio file.
 

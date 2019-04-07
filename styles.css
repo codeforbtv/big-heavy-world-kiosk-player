@@ -1,0 +1,78 @@
+/* The heights and widths for this site are fixed.
+ * The assumption is it will only be used in a specific environment
+ * https://support.apple.com/kb/sp662?locale=en_US
+ * https://docs.kioskproapp.com/
+ * However, if it is to be displayed on a different platform,
+ *   or with a different browser,
+ *   guiding principles are these:
+ * 1. The tablet is held in the landscape position.
+ * 2. The havigation section is about 20% of the width
+ *    The browser does not display a scroll bar.
+ * 3. The image in the article is displayed as large as possible,
+ *    while still maintaining the correct aspect ratio,
+ *    and leaving room for the audio controls.
+ * 4. The audio controls are displayed below the image.
+ * 5. Copyright info, if any, is displayed in the footer.
+ */
+
+/***** CSS for tablet *****/
+
+.wrapper {
+    display: table;
+    margin: 0 auto;
+    height: 1536px;
+    width: 2048px;
+    background-color: black;
+}
+header {}
+nav {
+    height: 1536px;
+    /* width of hav img + (2x border) + width of scroll bar */
+    width:  310px; /* 300px + 10px + 0px */
+    float: left;
+    overflow: auto;
+    background-color: black;
+}
+article {
+    height: 1436px;
+    /*2048 - width of nav */
+    width: 1738px; /*2048 - 310 */
+    float: left;
+    background-color: black;
+}
+footer {
+    height: 50px;
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+    color: #777;
+    text-align: right;
+    padding: 30px;
+}
+
+nav img {
+    width: 300px;
+    border: black 5px solid;
+    border-bottom: none;
+    display: block;
+}
+#image-div {
+    display: table;
+    margin: 0 auto;
+}
+#image-div img {
+    width: 1738px;
+    text-align: center;
+    display: block;
+}
+#audio-div {
+    display: table;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+#artist-info {
+    margin: 0 auto;
+    padding: 50px;
+    font-size: 50px;
+    color: #555;
+}

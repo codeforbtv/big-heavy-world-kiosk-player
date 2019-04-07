@@ -1,0 +1,20 @@
+# directories
+.idea/
+audio-sav/
+images-sav/
+thumbnails-sav/
+
+# files
+.directory
+playlist.js
+test.html
+
+# audio files
+*.mp3
+
+# image files
+i *.jpg
+
+# thumbnail files
+t *.jpg
+

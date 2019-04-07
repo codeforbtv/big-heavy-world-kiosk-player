@@ -1,0 +1,44 @@
+.player {
+    position: relative;
+    width: 1000px;
+    height: 120px;
+    background-color: #777;
+    display: flex;
+    border-radius: 2px;
+    padding: 5px 16px;
+}
+.play-pause img {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
+@font-face {
+    font-family: "Oswald";
+    src: url("Oswald-Regular.ttf");
+}
+.name {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /*text-align: center;*/
+    width: 90%;
+    padding: 0 30px;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+}
+.btns {
+    width: 10%;
+    float: right;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+.progress {
+    position: absolute;
+    height: 4px;
+    left: 0;
+    top: 0;
+    background-color: white;
+}
